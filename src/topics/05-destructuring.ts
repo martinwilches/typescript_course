@@ -25,8 +25,20 @@ const audioPlayer: AudioPlayer = {
 const { song: anotherSong } = audioPlayer
 
 // al desestructurarse la propiedad, se puede referenciar la nueva variable con un nombre distinto al de la propiedad
-console.log(anotherSong)
+// console.log(anotherSong)
 
 // desestructuracion de una propiedad que se encuentra en un objeto dentro de otro objetso
 const {author} = audioPlayer.details
-console.log(author)
+// console.log(author)
+
+/**
+ * Desestructuracion de arreglos
+*/
+
+
+const dbz: string[] = ['goku', 'vegeta', 'trunks']
+
+// se desestructura elemento ubicado en la posicion 3 del arreglo, y se ignoran los 2 primeros elementos
+const [,,trunks = 'Not found'] = dbz // se asigna un valor por defecto al elemento desestructurado en caso que no exista en el arreglo
+
+console.log(trunks)
