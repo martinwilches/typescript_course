@@ -2,7 +2,7 @@
  * interfaces
 */
 
-interface Product {
+export interface Product {
     description: string
     price: number
 }
@@ -23,7 +23,7 @@ const tablet: Product = {
     description: 'iPhone',
     price: 200
 }
-function taxCalculation(options: TaxCalculationOptions): [number, number] { // retorna un arreglo de unicamente 2 numeros
+export function taxCalculation(options: TaxCalculationOptions): [number, number] { // retorna un arreglo de unicamente 2 numeros
     let total = 0
 
     // desestructuracion del objeto recibido como parametro en la funcion
@@ -36,7 +36,7 @@ function taxCalculation(options: TaxCalculationOptions): [number, number] { // r
     return [total, total * tax]
 }
 
-const shoppingCart = [phone, tablet]
+const shoppingCart: Product[] = [phone, tablet]
 const tax = 0.15
 
 // desestructuracion en 2 variables del valor retornado por la funcion
@@ -45,5 +45,5 @@ const [total, taxTotal] = taxCalculation({
     tax
 })
 
-console.log('Total: ', total)
-console.log('Tax total: ', taxTotal)
+// console.log('Total: ', total)
+// console.log('Tax total: ', taxTotal)
