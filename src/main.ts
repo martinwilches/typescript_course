@@ -5,6 +5,7 @@
 // import './topics/05-destructuring'
 // import './topics/06-function-destructuring'
 // import './topics/07-modules'
+import './topics/08-basic-classes'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
